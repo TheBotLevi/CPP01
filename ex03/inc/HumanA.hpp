@@ -6,7 +6,7 @@
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 15:31:31 by ljeribha          #+#    #+#             */
-/*   Updated: 2025/11/26 11:36:59 by ljeribha         ###   ########.fr       */
+/*   Updated: 2025/11/27 13:50:23 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class HumanA {
                 void    attack();
                 HumanA(const std::string &name, Weapon &weapon);
         private:
-                Weapon &weapon;
+                Weapon &_weapon;
                 std::string _name;
 };
 
