@@ -1,9 +1,9 @@
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = srcs/main.cpp srcs/SedIsForLosers.cpp
+SRC = srcs/main.cpp srcs/Harl.cpp
 OBJDIR = objs
 OBJ = $(SRC:srcs/%.cpp=$(OBJDIR)/%.o)
-TARGET = SIFL
+TARGET = Harl
 
 all: $(TARGET)
 

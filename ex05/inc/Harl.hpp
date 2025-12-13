@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SedIsForLosers.hpp                                 :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 16:56:03 by ljeribha          #+#    #+#             */
-/*   Updated: 2025/12/12 18:27:17 by ljeribha         ###   ########.fr       */
+/*   Created: 2025/12/10 17:22:32 by ljeribha          #+#    #+#             */
+/*   Updated: 2025/12/12 16:59:40 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <fstream>
 #include <iostream>
-#include <sstream>
 
-std::string replaceAll(std::string fullString, std::string &wordFound, std::string &wordReplace);
-std::string readFile(const std::string& filename);
-void writeFile(const std::string& filename, const std::string& text);
+class Harl {
+        public:
+                void complain(std::string level);
+                static void (Harl::*functions[4])();
+        private:
+                void debug( void );
+                void info( void );
+                void warning( void );
+                void error( void );
+};

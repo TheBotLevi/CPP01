@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   SedIsForLosers.hpp                                 :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljeribha <ljeribha@student.42luxembourg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/04 16:56:03 by ljeribha          #+#    #+#             */
-/*   Updated: 2025/12/12 18:27:17 by ljeribha         ###   ########.fr       */
+/*   Created: 2025/12/10 17:22:15 by ljeribha          #+#    #+#             */
+/*   Updated: 2025/12/13 11:24:13 by ljeribha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "../inc/Harl.hpp"
 
-#include <fstream>
-#include <iostream>
-#include <sstream>
+int main(int ac, char **av) {
+        Harl harl;
 
-std::string replaceAll(std::string fullString, std::string &wordFound, std::string &wordReplace);
-std::string readFile(const std::string& filename);
-void writeFile(const std::string& filename, const std::string& text);
+        if (ac != 2) {
+                std::cout << "Usage: ./program <level>" << std::endl;
+                return 1;
+        }
+        harl.complain(av[1]);
+        return 0;
+}
